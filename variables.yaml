@@ -1,0 +1,59 @@
+# ALM Octane connection. Space selectors accept a case-insensitive name or numeric ID.
+# Example selectors match the anonymized mapping; replace them for a real workspace.
+OCTANE_SHARED_SPACE_NAME: "Example Shared Space 1"
+OCTANE_WORKSPACE_NAME: "Example Workspace 1"
+
+# Suite-run discovery accepts numeric IDs, a release name, or Release, Sprint.
+OCTANE_REGRESSION_SUITE_RUN_ID: "800001"
+OCTANE_CRITICAL_SUITE_RUN_ID: "800002"
+
+# Optional comma-separated defined scope names used by the report analytics.
+OCTANE_DEFINED_SCOPE: "Example App - Alex Example, Example API - Taylor Example, Example Portal"
+
+# Optional main graph titles. Blank values retain the plugin's existing titles.
+OCTANE_CRITICAL_GRAPHS_TITLE: ""
+OCTANE_REGRESSION_GRAPHS_TITLE: ""
+
+# Report identity.
+OCTANE_PROJECT_NAME: "Example Project"
+OCTANE_DOMAIN_NAME: "Example Domain"
+
+# Project length.
+OCTANE_TIMEOUT_MINUTES: "5"
+# Leave blank or set to 0 to disable extended time.
+OCTANE_TIMEOUT_MINUTES_EXTENDED: "3"
+
+# Progress email scheduling. Leave the cron value blank to disable.
+# '* * * * 1-5' runs every minute on weekdays.
+PROGRESS_EMAIL_INTERVAL_CRONJOB: "* * * * 1-5"
+# When true/1, suppress subsequent interval emails until execution progress increases.
+# When false/0, send on every cron tick even when execution progress is unchanged.
+PROGRESS_EMAIL_INTERVAL_TIMEOUT: "false"
+
+# Email recipients.
+OCTANE_EMAIL_TO: "qa-team@example.com"
+OCTANE_EMAIL_CC: "qa-leads@example.com"
+
+# Mark interval and final reports as important across supported mail clients.
+OCTANE_INTERVAL_EMAIL_IS_IMPORTANT: "false"
+OCTANE_FINAL_EMAIL_IS_IMPORTANT: "false"
+
+# Optional email project summary. Use YAML's | block syntax for multiple lines.
+# One to five leading asterisks create progressively nested bullet levels.
+PROJECT_SUMMARY: ""
+# Set to true/1 to include the summary in interval emails as well as the final email.
+PRINT_PROJECT_SUMMARY_ON_INTERVAL_EMAILS: "false"
+
+# Set to true/1 to list defects below the execution graph in email bodies.
+PRINT_DEFECTS_ON_EMAIL_BODY: "false"
+# Comma-separated OR filters across defect ID, name, severity/group, and status.
+PRINT_DEFECTS_ON_EMAIL_BODY_FILTER: ""
+# Maximum rows after ID sorting. Set to 0 or leave blank for no limit.
+PRINT_DEFECTS_ON_EMAIL_BODY_LIMIT: "100"
+
+# Optional ArgoCD GitOps state publication. Leave the repository URL or state file path blank
+# to bypass synchronization. Store the Git username/token in Jenkins Credentials.
+ARGOCD_SYNC_REPO_URL: ""
+ARGOCD_SYNC_BRANCH: "main"
+ARGOCD_STATE_FILE_PATH: ""
+ARGOCD_GIT_CREDENTIAL_ID: ""
